@@ -43,7 +43,10 @@ begin
   for X := 0 to FGame.Table.Width - 1 do
     for Y := 0 to FGame.Table.Height - 1 do
       if FGame.Table[X, Y] = csEmpty then
+      begin
         FGame.Put(X, Y, FPlayerType);
+        Exit;
+      end;
 end;
 (* end of TCPU1 *)
 
